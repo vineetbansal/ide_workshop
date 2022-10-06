@@ -1,36 +1,20 @@
 # Accelerate Your Coding with PyCharm and Visual Studio Code
 
-### Sample code/scripts/notebooks for an "Introduction to Pycharm/VS Code" workshop
-
-This repository contains a couple of simple scripts.
- - The `01_pandas.py` script loads and displays a sample dataset commonly used in Machine Learning.
- - The `02_faces.py` script loads a bunch of face images (AT&T employees from the early 1990s) and creates an *Average Face*.
+### The Plan
 
 The code included in this repository has some problems. We will use the IDE as much as possible to detect, debug and fix these problems.
 Along the way we'll look at how the IDEs might help us in:
-
- - Isolating our work by environments.
- - Breaking functionality down into reusable functions.
- - Testing any functions we write.
- - Squashing bugs using a Debugger.
- - (If we must have notebooks), keeping the notebook code to a minimum.
- - Following pep8 recommendations and fixing common anti-patterns.
- - Profiling and optimizing our code.
- - Using remote interpreters when our laptop just won't do the job.
-
-### The Plan
-
-Here is a rough outline we will follow:
 
  - Run some simple scripts in a local `conda` environment.
  - Specify dependencies for our project.
  - Refactor our script into a reusable module.
  - Write tests for the module. Some of these will fail.
  - Refactor our module to satisfy all tests.
- - Reformat our code to adhere to professional standards.
  - Write a helper jupyter notebook for visualization.
- - Run our scripts/tests remotely on `adroit-vis.princeton.edu` against *real* data.
- - Run our jupyter notebook remotely on `adroit-vis.princeton.edu` against *real* data.
+ - Refactor/format our code to adhere to professional standards. (`pep8`)
+ - Profile code for potential speedups.
+ - Run our scripts/tests remotely on `adroit-vis.princeton.edu` against *real* data, without leaving the IDE.
+ - Run our jupyter notebook remotely on `adroit-vis.princeton.edu` against *real* data, without leaving the IDE.
 
 
 #### Details
@@ -64,7 +48,10 @@ def average_face(folder):
     return np.mean(X, axis=0).reshape((64, 64))
 ```
 
-The following commands are taken from [Jupyter on HPC Clusters](https://researchcomputing.princeton.edu/support/knowledge-base/jupyter)
+The remote server we will use is `adroit-vis.princeton.edu`. The data is located at `/scratch/network/vineetb/data`.
+
+The following commands are taken from the excellent resource [Jupyter on HPC Clusters](https://researchcomputing.princeton.edu/support/knowledge-base/jupyter).
+Another excellent resource for VS-Code is [Visual Studio Code and Remote Code Development](https://researchcomputing.princeton.edu/visual-studio-code-and-remote-code-development).
 
 ```
 module load anaconda3/2022.5
