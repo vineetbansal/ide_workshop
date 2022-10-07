@@ -51,7 +51,7 @@ def average_face(folder):
 The remote server we will use is `adroit-vis.princeton.edu`. The data is located at `/scratch/network/vineetb/data`.
 
 The following commands are taken from the excellent resource [Jupyter on HPC Clusters](https://researchcomputing.princeton.edu/support/knowledge-base/jupyter).
-Another excellent resource for VS-Code is [Visual Studio Code and Remote Code Development](https://researchcomputing.princeton.edu/visual-studio-code-and-remote-code-development).
+Another excellent resource for VS-Code is [Visual Studio Code and Remote Code Development](https://researchcomputing.princeton.edu/visual-studio-code-and-remote-code-development). **Make sure to start the jupyter server on adroit from directly inside the folder that you have mapped as the "target" in PyCharm remote deployment configuration**.
 
 ```
 module load anaconda3/2022.5
